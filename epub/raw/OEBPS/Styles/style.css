@@ -29,11 +29,11 @@ hr.linea {
 h1.present {
     margin-top: 6%;
 }
-h2.present {
+h4.present {
     text-transform: none;
     font-weight: normal;
-    font-size: 1em;
     margin-bottom: 0;
+    font-style: normal;
 }
 
 
