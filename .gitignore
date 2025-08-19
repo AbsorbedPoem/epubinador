@@ -1,6 +1,8 @@
 Manuscrito/
 Soul Noise.epub
 
+lib/
+
 epub/raw/OEBPS/Text/*
 !epub/raw/OEBPS/Text/
 epub/raw/OEBPS/toc.ncx
