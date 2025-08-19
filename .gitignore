@@ -1,7 +1,7 @@
 Manuscrito/
 Soul Noise.epub
 
-lib/
+lib/__pycache__
 
 epub/raw/OEBPS/Text/*
 !epub/raw/OEBPS/Text/
