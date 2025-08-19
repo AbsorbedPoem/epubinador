@@ -9,17 +9,17 @@ import json
 has_readed_chapters = False
 
 
-def add_title_and_index(raw, title, index, is_chapter):
+def add_title_and_index(raw, title:str, index, is_chapter):
     if is_chapter:
         return b'<body>' + \
             b'<h3>' + bytes(str(index), encoding='utf-8') + b'</h3>' + \
-            b'<h2>' + bytes(title, encoding='utf-8') + b'</h2>' + \
+            b'<h2>' + bytes(title.capitalize(), encoding='utf-8') + b'</h2>' + \
             raw + \
             b'</body>'
     else :
         if title != 'Sinópsis' and title != 'Dedicatoria':
             return b'<body>' + \
-                b'<h1>' + bytes(title, encoding='utf-8') + b'</h1>' + \
+                b'<h1>' + bytes(title.capitalize(), encoding='utf-8') + b'</h1>' + \
                 raw + \
                 b'</body>'
         else: return b'<body>' + raw + b'</body>'
@@ -81,17 +81,16 @@ def prepare_and_save_page(origin, is_chapter=True) -> str:
     return save_name
 
 
-def prepare_part_page(number, title):
-    number = number
+def prepare_part_page(number:str, title:str):
     ET.register_namespace('', 'http://www.w3.org/1999/xhtml')
     part_template:ET.ElementTree = ET.parse('./templates/part.xhtml')
     
     chapter_xml = part_template.getroot()
 
     chapter_xml.find('{http://www.w3.org/1999/xhtml}body').\
-    find('{http://www.w3.org/1999/xhtml}h2').text = f'{number} Parte'
+    find('{http://www.w3.org/1999/xhtml}h2').text = f'{number.capitalize()} PARTE'
     chapter_xml.find('{http://www.w3.org/1999/xhtml}body').\
-    find('{http://www.w3.org/1999/xhtml}h1').text = title
+    find('{http://www.w3.org/1999/xhtml}h1').text = title.capitalize()
 
     chapter_xml.find('{http://www.w3.org/1999/xhtml}head').\
     find('{http://www.w3.org/1999/xhtml}title').text = f'{number} Parte'

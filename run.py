@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import filedialog
-# from lib import vars, chapters, toc, manifest
 
 from lib.vars import output_path, root_path
 from lib.chapters import parse_chapters
