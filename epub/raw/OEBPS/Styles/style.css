@@ -15,7 +15,7 @@ h1, h2, h3 {
     font-size: 1.3em;
     margin: 3em 0 ;
     font-family: "Times New Roman";
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 hr.linea {
@@ -24,6 +24,16 @@ hr.linea {
     height: 0;
     border: none;
     border-top: 0.125em solid black;
+}
+
+h1.present {
+    margin-top: 6%;
+}
+h2.present {
+    text-transform: none;
+    font-weight: normal;
+    font-size: 1em;
+    margin-bottom: 0;
 }
 
 

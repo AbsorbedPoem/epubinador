@@ -17,7 +17,7 @@ def add_title_and_index(raw, title:str, index, is_chapter):
             raw + \
             b'</body>'
     else :
-        if title != 'Sinópsis' and title != 'Dedicatoria':
+        if title not in ['Sinópsis', 'Dedicatoria', 'Detalles'] :
             return b'<body>' + \
                 b'<h1>' + bytes(title.upper(), encoding='utf-8') + b'</h1>' + \
                 raw + \
@@ -109,9 +109,7 @@ def prepare_part_page(number:str, title:str):
 
     return save_name
 
-
-def parse_chapters():
-
+def add_portada():
     shutil.copy('./templates/cubierta.xhtml', f'{output_path}OEBPS/Text/Portada.xhtml')
     routes['pre'].append({
         'path' : 'Portada.xhtml',
@@ -119,13 +117,24 @@ def parse_chapters():
     })
     print('Portada')
 
+def add_presentacion():
+    shutil.copy('./templates/presentacion.xhtml', f'{output_path}OEBPS/Text/Presentación.xhtml')
+    routes['pre'].append({
+        'path' : 'Presentación.xhtml',
+        'nav_text' : 'Presentación'
+    })
+    print('Presentación')
+
+
+def parse_chapters():
+
+    add_portada()
+
     global has_readed_chapters
 
     for part in os.listdir(root_path):
 
         if os.path.isdir(f"{root_path}/{part}") and part != 'Parafernalia':
-
-            print(part)
 
             part_number = part.split('.')[1].split(' ')[1]
             part_title = part.split('.')[2].strip()
@@ -146,12 +155,14 @@ def parse_chapters():
                     'nav_text' : str(int(chapter[:2])) + chapter[2:-5]
                 })
                 
-        elif f"{root_path}/{part}"[-5:] == '.docx':
+        elif part[-5:] == '.docx':
 
             path = f"{root_path}/{part}"
             result_name = prepare_and_save_page(origin=path, is_chapter=False)
 
             add_parafernalia_nav(result_name)
+
+            if part[4:] == 'Sinópsis.docx': add_presentacion()
 
 
     # with open('./reference.json', 'w') as js:

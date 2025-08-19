@@ -60,5 +60,5 @@ def create_manifest():
     
     with open(f'{output_path}/OEBPS/content.opf', 'wb') as out:
         ET.indent(content_opf, '    ')
-        content_opf.write(out, 'utf-8')
+        content_opf.write(out, 'utf-8', xml_declaration=True)
         print('\nManifest')
