@@ -21,7 +21,7 @@ def createNavElement(element_data:str, parte=False):
         text_label.text = str(element_data['nav_text']).replace('_', ' ')
     else:
         split_part_title = element_data['nav_text'].split(':')
-        text_label.text = str(split_part_title[0]) + ' Parte:' + str(split_part_title[1])
+        text_label.text = str(split_part_title[0]) + ' parte:' + str(split_part_title[1])
     label.append(text_label)
     navItem.append(label)
 

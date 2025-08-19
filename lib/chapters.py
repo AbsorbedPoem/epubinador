@@ -13,13 +13,13 @@ def add_title_and_index(raw, title:str, index, is_chapter):
     if is_chapter:
         return b'<body>' + \
             b'<h3>' + bytes(str(index), encoding='utf-8') + b'</h3>' + \
-            b'<h2>' + bytes(title.capitalize(), encoding='utf-8') + b'</h2>' + \
+            b'<h2>' + bytes(title.upper(), encoding='utf-8') + b'</h2>' + \
             raw + \
             b'</body>'
     else :
         if title != 'Sinópsis' and title != 'Dedicatoria':
             return b'<body>' + \
-                b'<h1>' + bytes(title.capitalize(), encoding='utf-8') + b'</h1>' + \
+                b'<h1>' + bytes(title.upper(), encoding='utf-8') + b'</h1>' + \
                 raw + \
                 b'</body>'
         else: return b'<body>' + raw + b'</body>'
@@ -88,9 +88,9 @@ def prepare_part_page(number:str, title:str):
     chapter_xml = part_template.getroot()
 
     chapter_xml.find('{http://www.w3.org/1999/xhtml}body').\
-    find('{http://www.w3.org/1999/xhtml}h2').text = f'{number.capitalize()} PARTE'
+    find('{http://www.w3.org/1999/xhtml}h2').text = f'{number.upper()} PARTE'
     chapter_xml.find('{http://www.w3.org/1999/xhtml}body').\
-    find('{http://www.w3.org/1999/xhtml}h1').text = title.capitalize()
+    find('{http://www.w3.org/1999/xhtml}h1').text = title.upper()
 
     chapter_xml.find('{http://www.w3.org/1999/xhtml}head').\
     find('{http://www.w3.org/1999/xhtml}title').text = f'{number} Parte'
