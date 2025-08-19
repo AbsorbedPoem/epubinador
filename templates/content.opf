@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:title>Soul Noise</dc:title>
+        <dc:creator opf:file-as="Kuang, R. F." opf:role="aut">Alexander Lunado</dc:creator>
+        <dc:language>es</dc:language>
+        <!-- <dc:contributor opf:file-as="Henríquez, Patricia" opf:role="trl">Patricia Henríquez</dc:contributor> -->
+        <dc:subject>Novela, Fantástico</dc:subject>
+        <dc:description>&lt;p&gt;Normalmente el alma sale del cuerpo cuando comienza a morir. Y funciona igual para Nolin, pero a él además lo matan los nervios. Pronto comenzará un viaje en el que un tremendo peligro dispondrá de su corazón a cada rato.&lt;/p&gt;&lt;p&gt;Nolin se desmaya por conocer a cierta chica, o por verla sangrar, pero luego se la lleva a conocer el mundo. Es así como, junto a su diverso y osado grupo de exploración, además de una monstruosa criatura colada en su carruaje, el chico se aventura hacia lo desconocido, donde le espera un continente oscuro y hambriento que alberga sus sueños.&lt;/p&gt;</dc:description>
+        <dc:date opf:event="publication">2026-12-12</dc:date>
+        <dc:publisher>--</dc:publisher>
+        <dc:identifier opf:scheme="EPL">93750</dc:identifier>
+        <meta content="Soul Noise" name="calibre:series" />
+        <meta content="1" name="calibre:series_index" />
+        <meta content="1" name="Sigil version" />
+        <dc:date opf:event="modification">2025-08-18</dc:date>
+        <dc:identifier opf:scheme="revision">1.0</dc:identifier>
+        <dc:identifier id="BookId" opf:scheme="UUID">urn:uuid:eacfac39-58f0-4ed5-9576-6b1b918b0886</dc:identifier>
+        <meta name="cover" content="Portada.jpg" />
+        <meta name="calibre:series" content="Soul Noise" />
+        <meta name="calibre:series_index" content="1" />
+        <meta name="calibre:user_metadata:#version" content="{&quot;is_category&quot;: true, &quot;#extra#&quot;: null, &quot;kind&quot;: &quot;field&quot;, &quot;is_custom&quot;: true, &quot;is_csp&quot;: false, &quot;colnum&quot;: 5, &quot;column&quot;: &quot;value&quot;, &quot;rec_index&quot;: 25, &quot;search_terms&quot;: [&quot;#version&quot;], &quot;link_column&quot;: &quot;value&quot;, &quot;is_multiple2&quot;: {&quot;cache_to_list&quot;: &quot;|&quot;, &quot;list_to_ui&quot;: &quot;, &quot;, &quot;ui_to_list&quot;: &quot;,&quot;}, &quot;is_multiple&quot;: &quot;|&quot;, &quot;datatype&quot;: &quot;text&quot;, &quot;#value#&quot;: [&quot;1.2&quot;], &quot;category_sort&quot;: &quot;value&quot;, &quot;table&quot;: &quot;custom_column_5&quot;, &quot;is_editable&quot;: true, &quot;label&quot;: &quot;version&quot;, &quot;display&quot;: {&quot;is_names&quot;: false}, &quot;name&quot;: &quot;Versión&quot;}" />
+        <meta name="calibre:user_metadata:#autor_ord" content="{&quot;is_category&quot;: false, &quot;#extra#&quot;: null, &quot;kind&quot;: &quot;field&quot;, &quot;is_custom&quot;: true, &quot;is_csp&quot;: false, &quot;colnum&quot;: 3, &quot;column&quot;: &quot;value&quot;, &quot;rec_index&quot;: 23, &quot;search_terms&quot;: [&quot;#autor_ord&quot;], &quot;link_column&quot;: &quot;value&quot;, &quot;is_multiple2&quot;: {}, &quot;is_multiple&quot;: null, &quot;datatype&quot;: &quot;composite&quot;, &quot;#value#&quot;: &quot;R. F. Kuang&quot;, &quot;category_sort&quot;: &quot;value&quot;, &quot;table&quot;: &quot;custom_column_3&quot;, &quot;is_editable&quot;: true, &quot;label&quot;: &quot;autor_ord&quot;, &quot;display&quot;: {&quot;composite_template&quot;: &quot;{author_sort}&quot;, &quot;contains_html&quot;: false, &quot;make_category&quot;: false, &quot;use_decorations&quot;: 0, &quot;composite_sort&quot;: &quot;text&quot;}, &quot;name&quot;: &quot;Autores&quot;}" />
+        <meta name="calibre:user_metadata:#epg_id" content="{&quot;is_category&quot;: false, &quot;#extra#&quot;: null, &quot;kind&quot;: &quot;field&quot;, &quot;is_custom&quot;: true, &quot;is_csp&quot;: false, &quot;colnum&quot;: 4, &quot;column&quot;: &quot;value&quot;, &quot;rec_index&quot;: 24, &quot;search_terms&quot;: [&quot;#epg_id&quot;], &quot;link_column&quot;: &quot;value&quot;, &quot;is_multiple2&quot;: {}, &quot;is_multiple&quot;: null, &quot;datatype&quot;: &quot;float&quot;, &quot;#value#&quot;: 10071672.0, &quot;category_sort&quot;: &quot;value&quot;, &quot;table&quot;: &quot;custom_column_4&quot;, &quot;is_editable&quot;: true, &quot;label&quot;: &quot;epg_id&quot;, &quot;display&quot;: {&quot;number_format&quot;: &quot;{0:0&gt;6.0f}&quot;}, &quot;name&quot;: &quot;EPG Id&quot;}" />
+        <meta name="calibre:user_metadata:#pages" content="{&quot;is_category&quot;: false, &quot;#extra#&quot;: null, &quot;kind&quot;: &quot;field&quot;, &quot;is_custom&quot;: true, &quot;is_csp&quot;: false, &quot;colnum&quot;: 2, &quot;column&quot;: &quot;value&quot;, &quot;rec_index&quot;: 22, &quot;search_terms&quot;: [&quot;#pages&quot;], &quot;link_column&quot;: &quot;value&quot;, &quot;is_multiple2&quot;: {}, &quot;is_multiple&quot;: null, &quot;datatype&quot;: &quot;int&quot;, &quot;#value#&quot;: 461, &quot;category_sort&quot;: &quot;value&quot;, &quot;table&quot;: &quot;custom_column_2&quot;, &quot;is_editable&quot;: true, &quot;label&quot;: &quot;pages&quot;, &quot;display&quot;: {&quot;number_format&quot;: &quot;{0:,}&quot;}, &quot;name&quot;: &quot;Páginas&quot;}" />
+        <meta name="calibre:user_metadata:#estado" content="{&quot;is_category&quot;: true, &quot;#extra#&quot;: null, &quot;kind&quot;: &quot;field&quot;, &quot;is_custom&quot;: true, &quot;is_csp&quot;: false, &quot;colnum&quot;: 7, &quot;column&quot;: &quot;value&quot;, &quot;rec_index&quot;: 26, &quot;search_terms&quot;: [&quot;#estado&quot;], &quot;link_column&quot;: &quot;value&quot;, &quot;label&quot;: &quot;estado&quot;, &quot;is_multiple&quot;: null, &quot;datatype&quot;: &quot;text&quot;, &quot;#value#&quot;: &quot;Disp.&quot;, &quot;category_sort&quot;: &quot;value&quot;, &quot;table&quot;: &quot;custom_column_7&quot;, &quot;is_editable&quot;: true, &quot;is_multiple2&quot;: {}, &quot;display&quot;: {&quot;use_decorations&quot;: 0}, &quot;name&quot;: &quot;Estado&quot;}" />
+    </metadata>
+    <manifest>
+        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+      
+    </manifest>
+    <spine toc="ncx">
+
+    </spine>
+    <guide>
+
+    </guide>
+</package>
