@@ -27,6 +27,11 @@ def select_file():
         shutil.unpack_archive(file_path, './', 'zip')
     else:
         print("No file selected.")
+        q = input(Fore.YELLOW + "Usar el ultimo archivo cargado? (S/N)" + Fore.RESET)
+        if q != 's' and q != 'S':
+            input("Pulsa cualquier tecla para salir")
+            exit()
+
 
 if __name__ == "__main__":
 
@@ -38,8 +43,8 @@ if __name__ == "__main__":
     create_table_of_content()
     create_manifest()
 
-    if os.path.isfile('Soul Noise.epub.epub'):
-        os.remove('Soul Noise.epub.epub')
+    if os.path.isfile('Soul Noise.epub'):
+        os.remove('Soul Noise.epub')
     shutil.make_archive('./Soul Noise', 'zip', output_path)
     os.rename('./Soul Noise.zip', 'Soul Noise.epub')
     print('\n' + Fore.GREEN + 'Libro Guardado' + Fore.RESET)
