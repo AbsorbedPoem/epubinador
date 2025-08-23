@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 
-from lib.vars import output_path, root_path, book_name, setMeta
+from lib.vars import output_path, root_path, setMeta
 from lib.chapters import parse_chapters
 from lib.toc import create_table_of_content
 from lib.manifest import create_manifest
@@ -42,6 +42,7 @@ if __name__ == "__main__":
     select_file()
 
     setMeta()
+    from lib.vars import book_name
 
     parse_chapters()
     create_table_of_content()
