@@ -1,12 +1,19 @@
 import xml.etree.ElementTree as ET
 from .vars import routes, output_path
 import os
+from datetime import datetime
 
 
 ET.register_namespace('', 'http://www.idpf.org/2007/opf')
 
 content_opf = ET.parse('./templates/content.opf')
 opf = content_opf.getroot()
+
+
+metadata = opf.find('{http://www.idpf.org/2007/opf}metadata')
+date = metadata.find('{http://purl.org/dc/elements/1.1/}date')
+date.text = datetime.now().strftime("%Y-%m-%d")
+
 
 manifest = opf.find('{http://www.idpf.org/2007/opf}manifest')
 spine = opf.find('{http://www.idpf.org/2007/opf}spine')
