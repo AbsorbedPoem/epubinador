@@ -11,8 +11,13 @@ opf = content_opf.getroot()
 
 
 metadata = opf.find('{http://www.idpf.org/2007/opf}metadata')
-date = metadata.find('{http://purl.org/dc/elements/1.1/}date')
-date.text = datetime.now().strftime("%Y-%m-%d")
+dates = metadata.findall('{http://purl.org/dc/elements/1.1/}date')
+
+for date in dates:
+    event = date.get('{http://www.idpf.org/2007/opf}event')
+    if event in ['modification', 'publication']:
+        date.text = datetime.now().strftime("%Y-%m-%d")
+
 
 
 manifest = opf.find('{http://www.idpf.org/2007/opf}manifest')

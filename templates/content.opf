@@ -7,7 +7,7 @@
         <!-- <dc:contributor opf:file-as="Henríquez, Patricia" opf:role="trl">Patricia Henríquez</dc:contributor> -->
         <!-- <dc:subject>Novela, Fantástico</dc:subject> -->
         <dc:description>&lt;p&gt;Normalmente el alma sale del cuerpo cuando comienza a morir. Y funciona igual para Nolin, pero a él además lo matan los nervios. Pronto comenzará un viaje en el que un tremendo peligro dispondrá de su corazón a cada rato.&lt;/p&gt;&lt;p&gt;Nolin se desmaya por conocer a cierta chica, o por verla sangrar, pero luego se la lleva a conocer el mundo. Es así como, junto a su diverso y osado grupo de exploración, además de una monstruosa criatura colada en su carruaje, el chico se aventura hacia lo desconocido, donde le espera un continente oscuro y hambriento que alberga sus sueños.&lt;/p&gt;</dc:description>
-        <!-- <dc:date opf:event="publication">2026-12-12</dc:date> -->
+        <dc:date opf:event="publication">2026-12-12</dc:date>
         <dc:publisher>--</dc:publisher>
         <dc:identifier opf:scheme="EPL">93750</dc:identifier>
         <!-- <meta content="Soul Noise" name="calibre:series" /> -->
