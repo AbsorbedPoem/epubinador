@@ -47,6 +47,7 @@ if __name__ == "__main__":
     parse_chapters()
     create_table_of_content()
     create_manifest()
+    book_name = book_name.upper()
 
     if os.path.isfile(f'{book_name}.epub'):
         os.remove(f'{book_name}.epub')

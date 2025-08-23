@@ -47,6 +47,10 @@ def set_metadata():
     creator = metadata.find('{http://purl.org/dc/elements/1.1/}creator')
     creator.text = meta['autor']
 
+    # idioma
+    creator = metadata.find('{http://purl.org/dc/elements/1.1/}language')
+    creator.text = meta['idioma']
+
     # publisher
     publisher = metadata.find('{http://purl.org/dc/elements/1.1/}publisher')
     if meta['genero'] != '':

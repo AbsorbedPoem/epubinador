@@ -184,6 +184,6 @@ def parse_chapters():
             if part[4:] == 'Sinópsis.docx': add_presentacion()
         
         elif part == 'Portada.jpg':
-            if os.path.isfile(f"{root_path}/Portada.jpg"):
-                os.remove(f"{root_path}/Portada.jpg")
+            if os.path.isfile(f"{root_path}/OEBPS/Images/Portada.jpg"):
+                os.remove(f"{root_path}/OEBPS/Images/Portada.jpg")
             shutil.copy(f"{root_path}/Portada.jpg", f"{output_path}/OEBPS/Images/Portada.jpg")
