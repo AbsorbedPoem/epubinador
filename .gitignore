@@ -1,5 +1,6 @@
 Manuscrito/
-Soul Noise.epub
+*.epub
+*.zip
 
 lib/__pycache__
 __pycache__

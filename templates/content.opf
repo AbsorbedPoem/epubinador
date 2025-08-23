@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package version="2.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
-        <dc:title>Soul Noise</dc:title>
-        <dc:creator opf:file-as="Kuang, R. F." opf:role="aut">Alexander Lunado</dc:creator>
+        <dc:title>--</dc:title>
+        <dc:creator opf:file-as="Kuang, R. F." opf:role="aut">--</dc:creator>
         <!-- <dc:language>es</dc:language> -->
         <!-- <dc:contributor opf:file-as="Henríquez, Patricia" opf:role="trl">Patricia Henríquez</dc:contributor> -->
-        <!-- <dc:subject>Novela, Fantástico</dc:subject> -->
+        <dc:subject>Novela, Fantástico</dc:subject>
         <dc:description>&lt;p&gt;Normalmente el alma sale del cuerpo cuando comienza a morir. Y funciona igual para Nolin, pero a él además lo matan los nervios. Pronto comenzará un viaje en el que un tremendo peligro dispondrá de su corazón a cada rato.&lt;/p&gt;&lt;p&gt;Nolin se desmaya por conocer a cierta chica, o por verla sangrar, pero luego se la lleva a conocer el mundo. Es así como, junto a su diverso y osado grupo de exploración, además de una monstruosa criatura colada en su carruaje, el chico se aventura hacia lo desconocido, donde le espera un continente oscuro y hambriento que alberga sus sueños.&lt;/p&gt;</dc:description>
-        <dc:date opf:event="publication">2026-12-12</dc:date>
+        <dc:date opf:event="publication">--</dc:date>
         <dc:publisher>--</dc:publisher>
         <dc:identifier opf:scheme="EPL">93750</dc:identifier>
         <!-- <meta content="Soul Noise" name="calibre:series" /> -->
         <meta content="1" name="calibre:series_index" />
         <meta content="1" name="Sigil version" />
-        <dc:date opf:event="modification">2025-08-18</dc:date>
+        <dc:date opf:event="modification">--</dc:date>
         <dc:identifier opf:scheme="revision">1.0</dc:identifier>
         <dc:identifier id="BookId" opf:scheme="UUID">urn:uuid:eacfac39-58f0-4ed5-9576-6b1b918b0886</dc:identifier>
         <meta name="cover" content="Portada.jpg" />

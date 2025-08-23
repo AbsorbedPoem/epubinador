@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 
-from lib.vars import output_path, root_path
+from lib.vars import output_path, root_path, book_name
 from lib.chapters import parse_chapters
 from lib.toc import create_table_of_content
 from lib.manifest import create_manifest
@@ -35,6 +35,7 @@ def select_file():
 
 if __name__ == "__main__":
 
+
     print(Fore.YELLOW + 'AGMIGRRA EL EPUBINADOOOOR' + Fore.RESET)
 
     select_file()
@@ -43,10 +44,10 @@ if __name__ == "__main__":
     create_table_of_content()
     create_manifest()
 
-    if os.path.isfile('Soul Noise.epub'):
-        os.remove('Soul Noise.epub')
-    shutil.make_archive('./Soul Noise', 'zip', output_path)
-    os.rename('./Soul Noise.zip', 'Soul Noise.epub')
+    if os.path.isfile(f'{book_name}.epub'):
+        os.remove(f'{book_name}.epub')
+    shutil.make_archive(f'./{book_name}', 'zip', output_path)
+    os.rename(f'./{book_name}.zip', f'{book_name}.epub')
     print('\n' + Fore.GREEN + 'Libro Guardado' + Fore.RESET)
     input()
 

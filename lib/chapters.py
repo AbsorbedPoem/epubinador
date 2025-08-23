@@ -1,7 +1,7 @@
 from mammoth import convert_to_html
 import xml.etree.ElementTree as ET
 import os
-from .vars import output_path, root_path, routes
+from .vars import output_path, root_path, routes, meta, book_name
 import shutil
 import json
 
@@ -118,7 +118,25 @@ def add_portada():
     print('Portada')
 
 def add_presentacion():
-    shutil.copy('./templates/presentacion.xhtml', f'{output_path}OEBPS/Text/Presentación.xhtml')
+
+    ET.register_namespace('', 'http://www.w3.org/1999/xhtml')
+    part_template:ET.ElementTree = ET.parse('./templates/presentacion.xhtml')
+    
+    chapter_xml = part_template.getroot()
+
+    chapter_xml.find('{http://www.w3.org/1999/xhtml}body').\
+    find('{http://www.w3.org/1999/xhtml}h1').text = book_name.upper()
+    chapter_xml.find('{http://www.w3.org/1999/xhtml}body').\
+    find('{http://www.w3.org/1999/xhtml}h4').text = meta['autor']
+
+
+    ET.indent(part_template, '    ')
+    with open(f'{output_path}/OEBPS/Text/Presentación.xhtml', 'wb') as out:
+        out.write(b'<?xml version="1.0" encoding="UTF-8"?>\n')
+        out.write(b'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" \n\t'
+                b'"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\n\n')
+        part_template.write(out, 'utf-8')
+    
     routes['pre'].append({
         'path' : 'Presentación.xhtml',
         'nav_text' : 'Presentación'
@@ -163,8 +181,3 @@ def parse_chapters():
             add_parafernalia_nav(result_name)
 
             if part[4:] == 'Sinópsis.docx': add_presentacion()
-
-
-    # with open('./reference.json', 'w') as js:
-    #     json.dump(routes, js, indent='    ')
-    
