@@ -27,7 +27,7 @@ def add_mani (x):
 
 def set_metadata():
 
-    from .vars import meta, book_name
+    from .vars import meta, book_name, descripcion_caca
 
     global opf
     metadata = opf.find('{http://www.idpf.org/2007/opf}metadata')
@@ -62,6 +62,14 @@ def set_metadata():
     if meta['genero'] != '':
         subject.text = meta['genero']
     else : metadata.remove(subject)
+
+    # descripcion
+    description = metadata.find('{http://purl.org/dc/elements/1.1/}description')
+    if descripcion_caca != '':
+        description.text = descripcion_caca
+    else : metadata.remove(description)
+
+
 
 
 def create_manifest():

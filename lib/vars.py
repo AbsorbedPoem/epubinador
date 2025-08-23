@@ -21,6 +21,7 @@ ncx = ncx_tree.getroot()
 
 meta:str = {}
 book_name:str = ''
+descripcion_caca:str = ''
 
 def setMeta():
     doc = Document(f'{root_path}/meta.docx')
@@ -30,3 +31,7 @@ def setMeta():
     meta = json.loads(text_content)
     global book_name
     book_name = meta['titulo'].title()
+
+    doc = Document(f'{root_path}/01. Sinópsis.docx')
+    global descripcion_caca
+    descripcion_caca = '\n'.join([paragraph.text for paragraph in doc.paragraphs])
