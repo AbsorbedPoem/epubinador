@@ -41,7 +41,7 @@ def set_metadata():
 
     # titulo
     title = metadata.find('{http://purl.org/dc/elements/1.1/}title')
-    title.text = book_name.title()
+    title.text = book_name.capitalize()
 
     # autor
     creator = metadata.find('{http://purl.org/dc/elements/1.1/}creator')
