@@ -1,5 +1,7 @@
 import xml.etree.ElementTree as ET
 import json
+from docx import Document
+import json
 
 
 root_path = './Manuscrito'
@@ -15,8 +17,16 @@ routes:dict = {
 ncx_tree:ET.ElementTree = ET.parse('./templates/toc.ncx')
 ncx = ncx_tree.getroot()
 
-meta:dict
-book_name:str
-with open(f'{root_path}/meta.txt', 'r') as js:
-    meta = json.load(js)
+
+
+meta:str = {}
+book_name:str = ''
+
+def setMeta():
+    doc = Document(f'{root_path}/meta.docx')
+    text_content = '\n'.join([paragraph.text for paragraph in doc.paragraphs])
+
+    global meta
+    meta = json.loads(text_content)
+    global book_name
     book_name = meta['titulo'].title()

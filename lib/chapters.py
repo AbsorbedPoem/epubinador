@@ -1,9 +1,8 @@
 from mammoth import convert_to_html
 import xml.etree.ElementTree as ET
 import os
-from .vars import output_path, root_path, routes, meta, book_name
+from .vars import output_path, root_path, routes
 import shutil
-import json
 
 
 has_readed_chapters = False
@@ -119,6 +118,8 @@ def add_portada():
 
 def add_presentacion():
 
+    from .vars import meta, book_name
+
     ET.register_namespace('', 'http://www.w3.org/1999/xhtml')
     part_template:ET.ElementTree = ET.parse('./templates/presentacion.xhtml')
     
@@ -181,3 +182,6 @@ def parse_chapters():
             add_parafernalia_nav(result_name)
 
             if part[4:] == 'Sinópsis.docx': add_presentacion()
+        
+        elif part == 'Portada.jpg':
+            shutil.copy(f"{root_path}/Portada.jpg", f"{output_path}/OEBPS/Images/Portada.jpg")

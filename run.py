@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 
-from lib.vars import output_path, root_path, book_name
+from lib.vars import output_path, root_path, book_name, setMeta
 from lib.chapters import parse_chapters
 from lib.toc import create_table_of_content
 from lib.manifest import create_manifest
@@ -21,7 +21,7 @@ def select_file():
     )
 
     if file_path:
-        print(f"Seleccionado: {file_path}")
+        print(f"Seleccionado: {file_path}\n")
         if os.path.isdir(root_path):
             shutil.rmtree(root_path)
         shutil.unpack_archive(file_path, './', 'zip')
@@ -38,7 +38,10 @@ if __name__ == "__main__":
 
     print(Fore.YELLOW + 'AGMIGRRA EL EPUBINADOOOOR' + Fore.RESET)
 
+
     select_file()
+
+    setMeta()
 
     parse_chapters()
     create_table_of_content()
